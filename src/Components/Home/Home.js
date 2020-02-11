@@ -14,21 +14,21 @@ const Home = () => {
                 <Link to='/Bad'>
                     <div className='HomeButtons'>
                         <img src={DiceImage}/>
-                        <p>Bad Roll</p>
+                        <h3>Bad Roll</h3>
                     </div>
                 </Link>
                 
                 <Link to='/Good'>
                     <div className='HomeButtons'>
                         <img src={DiceImage} />
-                        <p>Good Roll</p>
+                        <h3>Good Roll</h3>
                     </div>
                 </Link>
                 
                 <Link to='/DIY'>
                     <div className='HomeButtons'>
                         <img src={DiceImage}/>
-                        <p>Make Your Own Loot</p>
+                        <h3>Make Your Own Loot</h3>
                     </div>
                 </Link>
                 

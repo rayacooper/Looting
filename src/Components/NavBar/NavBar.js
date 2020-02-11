@@ -2,14 +2,17 @@ import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 
 const NavBar = () => {
-    <div>
-        <ul>
-            <Link to='/'><li>Home</li></Link>
-            <Link to='/Bad'><li>Bad</li></Link>
-            <Link to='/Good'><li>Good</li></Link>
-            <Link to='/DIY'><li>DIY</li></Link>
-        </ul>
-    </div>
+    return(
+        <div>
+            <ul>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/Bad'>Bad</Link></li>
+                <li><Link to='/Good'>Good</Link></li>
+                <li><Link to='/DIY'>DIY</Link></li>
+            </ul>
+        </div>
+    )
+    
 }
 
 export default withRouter(NavBar);
