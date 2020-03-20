@@ -1,0 +1,9 @@
+.GoodLoot img {
+    width: 70vw;
+}
+
+@media screen and (min-width: 800px){
+    .GoodLoot img {
+        width: 30vw;
+    }
+}

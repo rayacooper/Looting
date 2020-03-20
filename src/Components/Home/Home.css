@@ -19,3 +19,15 @@
 .HomeIntro{
     font-size: 3vh;
 }
+
+@media screen and (min-width: 800px){
+    .HomeOptions {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .HomeButtons img {
+        width: 40vh;
+        padding: 4vw 4vw 0px 4vw;
+    }
+}

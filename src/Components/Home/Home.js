@@ -1,7 +1,9 @@
 import React from 'react';
-import DiceImage from './../../Assets/20_sided_die.png';
 import {Link, withRouter} from 'react-router-dom';
 import './Home.css'
+
+const badDice = 'https://i.imgur.com/pQBtZ76.png';
+const goodDice = 'https://i.imgur.com/TU2TBeR.png'
 
 const Home = () => {
     return(
@@ -13,14 +15,14 @@ const Home = () => {
             <div className='HomeOptions'>
                 <Link to='/Bad'>
                     <div className='HomeButtons'>
-                        <img src={DiceImage} alt='Dice'/>
+                        <img src={badDice} alt='Dice'/>
                         <h3>Bad Roll</h3>
                     </div>
                 </Link>
                 
                 <Link to='/Good'>
                     <div className='HomeButtons'>
-                        <img src={DiceImage} alt='Dice'/>
+                        <img src={goodDice} alt='Dice'/>
                         <h3>Good Roll</h3>
                     </div>
                 </Link>
