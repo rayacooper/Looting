@@ -12,14 +12,62 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
+
 massive(process.env.CONNECTION_STRING)
-    .then((databaseVariable) => {
-        app.set('db', databaseVariable);
+    .then((instance) => {
+        app.set('db', instance);
         console.log('Db is connected')
     })
     .catch((error) => {
         console.log(`Error: ${error}`)
     })
+
+app.get('/ping', (req, res) => {
+    res.send('Oh Hello!')
+})
+
+
+app.get('/countBad', (req, res) => {
+    const db = req.app.get('db');
+    db.FIND_BAD_LIST()
+        .then((rez) => {
+            res.send({success: true, count: rez.length})
+        })    
+        .catch(error => {
+            console.log(`Error: ${error}`)
+        })
+})
+
+app.get('/countGood', (req, res) => {
+    const db = req.app.get('db');
+    db.FIND_GOOD_LIST()
+        .then((rez) => {
+            res.send({success: true, count: rez.length})
+        })    
+        .catch(error => {
+            console.log(`Error: ${error}`)
+        })
+})
+
+app.get('/randomBadItem/:random', (req, res) => {
+    const db = req.app.get('db');
+    const id = req.params.random;
+    db.SELECT_BAD_ITEM([id])
+        .then(rez => {
+            res.send({success: true, item: rez[0]})
+        })
+})
+
+app.get('/randomGoodItem/:random', (req, res) => {
+    const db = req.app.get('db');
+    const id = req.params.random;
+    db.SELECT_GOOD_ITEM([id])
+        .then(rez => {
+            res.send({success: true, item: rez[0]})
+        })
+})
+
+
 
 const port = process.env.PORT;
 app.listen(port, () => {

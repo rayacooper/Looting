@@ -13,24 +13,24 @@ const Home = () => {
             <div className='HomeOptions'>
                 <Link to='/Bad'>
                     <div className='HomeButtons'>
-                        <img src={DiceImage}/>
+                        <img src={DiceImage} alt='Dice'/>
                         <h3>Bad Roll</h3>
                     </div>
                 </Link>
                 
                 <Link to='/Good'>
                     <div className='HomeButtons'>
-                        <img src={DiceImage} />
+                        <img src={DiceImage} alt='Dice'/>
                         <h3>Good Roll</h3>
                     </div>
                 </Link>
                 
-                <Link to='/DIY'>
+                {/* <Link to='/DIY'>
                     <div className='HomeButtons'>
-                        <img src={DiceImage}/>
+                        <img src={DiceImage} alt='Dice'/>
                         <h3>Make Your Own Loot</h3>
                     </div>
-                </Link>
+                </Link> */}
                 
             </div>
 
