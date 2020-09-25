@@ -15,7 +15,7 @@ const Bad = () => {
             getRandomItem();
         }
         updateLoaded(true);
-    })
+    }, [loaded])
 
     let getRandomItem = function(){
         console.log('Clicked')
@@ -43,7 +43,7 @@ const Bad = () => {
         <div className='BadMain'>
             <NavBar />
             <div className='BadLoot'>
-                <img src={imageSource}/>
+                <img src={imageSource} alt={itemName}/>
                 <h2>{itemName}</h2>
                 <p>{description}</p>
             </div>
