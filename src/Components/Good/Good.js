@@ -42,13 +42,19 @@ const Good = () => {
     return(
         <div className='GoodMain'>
             <NavBar />
-            <div className='GoodLoot'>
-                <img src={imageSource} alt={itemName}/>
-                <h2>{itemName}</h2>
-                <p>{description}</p>
+            <div className={imageSource ? "ServerWorking" : "ServerNotWorking"}>
+                <div className='GoodLoot'>
+                    <img src={imageSource} alt={itemName}/>
+                    <h2>{itemName}</h2>
+                    <p>{description}</p>
+                </div>
+                <div className='ButtonDiv'>
+                    <button onClick={() => getRandomItem()}>Roll Again</button>
+                </div>
             </div>
-            <div className='ButtonDiv'>
-                <button onClick={() => getRandomItem()}>Roll Again</button>
+
+            <div className={imageSource ? "Ok" : "Whoops"}>
+                <h1>Uh oh! Looks like the server is down. Please try again later.</h1>
             </div>
         </div>
     )

@@ -2,6 +2,14 @@
     width: 70vw;
 }
 
+.ServerNotWorking {
+    display: none;
+}
+
+.Ok {
+    display: none;
+}
+
 @media screen and (min-width: 800px){
     .BadLoot img {
         width: 30vw;

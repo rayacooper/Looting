@@ -1,3 +1,11 @@
+.ServerNotWorking {
+    display: none;
+}
+
+.Ok {
+    display: none;
+}
+
 .GoodLoot img {
     width: 70vw;
 }
